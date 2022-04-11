@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PlayerMoviment : MonoBehaviour
 {
-    //COMENTÁRIO DE TESTE PRO GITHUB
     public GameObject outline;
+    public GameObject inspector;
     public bool selected = false;
+    
+    public static string nome = "José";
+    public static string[] atributos = {"Vida", "Velocidade", "Depressão"};
+    public static float[] valores = {15, 75, 100};
     
     void Update()
     {
         //Movimento e Outline
         if(selected){
             outline.SetActive(true);
+            inspector.SetActive(true);
             if(Input.GetKeyDown(KeyCode.UpArrow)){
                 transform.Translate(0, 1f, 0);
             }else if(Input.GetKeyDown(KeyCode.DownArrow)){
@@ -24,6 +29,7 @@ public class PlayerMoviment : MonoBehaviour
             }
         }else{
             outline.SetActive(false);
+            inspector.SetActive(false);
         }
     }
 

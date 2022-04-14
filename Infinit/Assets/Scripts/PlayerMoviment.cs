@@ -8,7 +8,8 @@ public class PlayerMoviment : MonoBehaviour
     public GameObject inspector;
     public bool selected = false;
     
-    public static string nome = "José";
+    [SerializeField]
+    public static string nome = "Coloque seu nome aqui!";
     public static string[] atributos = {"Vida", "Velocidade", "Depressão"};
     public static float[] valores = {15, 75, 100};
     
